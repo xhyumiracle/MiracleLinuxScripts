@@ -2,12 +2,12 @@
 
 MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # get the path of MiracleLinuxScript
 DIR=$MYDIR/Tools 
-PICDIR="~/Pictures"
-BACKGROUNDPIC="cbg.jpg"
+PICDIR=~/Pictures
+BACKGROUNDPIC=cbg.jpg
 
 # install terminator
 terminator(){
-  sudo apt-get updata
+  sudo apt-get update
   sudo apt-get install terminator -y
 
   mkdir -p $DIR
@@ -28,13 +28,13 @@ terminator(){
   git clone https://github.com/seebi/dircolors-solarized.git
   cd dircolors-solarized
   cp dircolors.256dark ~/.dircolors
-  echo "eval \`dircolors $DIR/terminator-solarized/dircolors-solarized/dircolors.256dark\`" >> ~/.profile
+  echo "eval \`dircolors $DIR/dircolors-solarized/dircolors.256dark\`" >> ~/.profile
 }
 
 # called only after terminator
 terminator_picture(){
   # terminator background picture
-  cp $(pwd)/$BACKGROUNDPIC $PICDIR/$BACKGROUNDPIC
+  cp $MYDIR/$BACKGROUNDPIC $PICDIR/
 
   rm -f ~/.config/terminator/config
   cd $DIR/terminator-solarized
