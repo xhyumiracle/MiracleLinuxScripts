@@ -76,7 +76,7 @@ change_wallpaper(){
   then
     cp $MYDIR/$WALLPAPER /usr/share/backgrounds/
   fi
-  gsettings set org.gnome.desktop.background picture-uri /usr/share/backgrounds/$WALLPAPER
+  gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/$WALLPAPER
 }
 
 # need 1 arg
@@ -99,6 +99,7 @@ main()
     terminator
     terminator_picture
     ubuntu_theme
+    change_wallpaper
   else
     for arg in $@
     do
