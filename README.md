@@ -16,12 +16,15 @@ $ ./ubuntu_theme_setup_xhyu.sh
 - If you want your unity menu bar stay on the left rather than bottom, just change the last word of the LAST LINE in the script from Bottom into Left. Or simply delete it.
 
 ### Other Options
-> ubuntu_theme_setup_xhyu.sh provides many other options.
+ubuntu_theme_setup_xhyu.sh provides many other options.
 - Usage:
 ```sh
 $ ./ubuntu_theme_setup_xhyu.sh [ args ]
 ```
-> example: ./ubuntu_theme_setup_xhyu.sh picture bottom wallpapper
+example:
+```sh
+./ubuntu_theme_setup_xhyu.sh picture bottom wallpapper
+```
 [args] can be one or more of the follows:
 - terminator
   Install terminator and setup dircolors-solarized(terminator's style)
