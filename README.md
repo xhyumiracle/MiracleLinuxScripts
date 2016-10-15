@@ -21,11 +21,11 @@ ubuntu_theme_setup_xhyu.sh provides many other options.
 ```sh
 $ ./ubuntu_theme_setup_xhyu.sh [ args ]
 ```
-example:
+- Example:
 ```sh
 ./ubuntu_theme_setup_xhyu.sh picture bottom wallpapper
 ```
-[args] can be one or more of the follows:
+[ args ] can be one or more of the follows:
 - terminator
   Install terminator and setup dircolors-solarized(terminator's style)
 - picture
@@ -44,9 +44,9 @@ example:
 ### Customize
 - To change the background of terminator, open terminator and right click on the empty field --> Prefences --> Profiles --> background
 - To change the Font of terminator, right click the terminator --> Profiles and choose one of the three theme. Or right click on the terminator --> Prefences --> Profiels --> Add (at the left bottom)
-- To change 
+- To change the wallpaper, right click on the desktop, you will see a 'Change Desktop Background'
 
 ### Attention
-> The Unity Tweak Tool can only support a certain number of display rate.
+> The Unity Tweak Tool(UTT) can only support a certain number of display rate.
 > So make sure you have common display set, otherwise the UTT maybe crash
 > ed whenever you start your Ubuntu.
