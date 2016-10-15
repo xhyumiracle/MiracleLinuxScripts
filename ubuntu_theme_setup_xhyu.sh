@@ -4,6 +4,7 @@ MYDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # get the path of Mira
 DIR=$MYDIR/Tools 
 PICDIR=~/Pictures
 BACKGROUNDPIC=cbg.jpg
+WALLPAPER=Night_lights_by_Alberto_Salvia_Novella.jpg
 
 # install terminator
 terminator(){
@@ -17,6 +18,7 @@ terminator(){
   cd terminator-solarized
   mkdir -p ~/.config/terminator/
   touch ~/.config/terminator/config
+  
 
   # if you want to replace current config:
   cp config ~/.config/terminator
@@ -37,8 +39,8 @@ terminator_picture(){
   cp $MYDIR/$BACKGROUNDPIC $PICDIR/
 
   rm -f ~/.config/terminator/config
-  cd $DIR/terminator-solarized
-  sed "24c\    background_image = $PICDIR/$BACKGROUNDPIC" config >> ~/.config/terminator/config
+  cd $MYDIR
+  sed "24c\    background_image = $PICDIR/$BACKGROUNDPIC" terminator_config >> ~/.config/terminator/config
 }
 
 vim_solarized(){
@@ -67,6 +69,14 @@ ubuntu_theme(){
 
   sudo apt-get install unity-tweak-tool
   sudo unity-tweak-tool
+}
+
+change_wallpaper(){
+  if ! [ -f /usr/share/backgrounds/$WALLPAPER ]
+  then
+    cp $MYDIR/$WALLPAPER /usr/share/backgrounds/
+  fi
+  gsettings set org.gnome.desktop.background picture-uri /usr/share/backgrounds/$WALLPAPER
 }
 
 # need 1 arg
@@ -110,6 +120,9 @@ main()
       elif [ $arg == "left" ]
       then
         launcher $arg
+      elif [ $arg == "wallpaper" ]
+      then
+        change_wallpaper
       fi
     done
   fi
