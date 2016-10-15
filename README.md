@@ -25,7 +25,8 @@ $ ./ubuntu_theme_setup_xhyu.sh [ args ]
 ```sh
 ./ubuntu_theme_setup_xhyu.sh picture bottom wallpapper
 ```
-[ args ] can be one or more of the follows:
+- Arguments:
+  [ args ] can be one or more of the follows:
 - terminator
   Install terminator and setup dircolors-solarized(terminator's style)
 - picture
