@@ -11,7 +11,7 @@ $ ./ubuntu_theme_setup_xhyu.sh
  1. Click Theme --> Choose Flatabulous-master
  2. Click Icons --> Ultra-flat
  3. Close the window
- 4. reboot the Ubuntu
+ 4. logout/reboot if the theme doesn't change immediately
 
 - If you want your unity menu bar stay on the left rather than bottom, just change the last word of the LAST LINE in the script from Bottom into Left. Or simply delete it.
 

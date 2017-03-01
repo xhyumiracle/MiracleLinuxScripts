@@ -68,7 +68,7 @@ ubuntu_theme(){
   sudo apt-get install ultra-flat-icons
 
   sudo apt-get install unity-tweak-tool
-  sudo unity-tweak-tool
+  unity-tweak-tool
 }
 
 change_wallpaper(){
